@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Modal, Frame } from '@react95/core'
 import Item from './Item'
+import '@react95/icons/icons.css';
+import { WindowsExplorer } from '@react95/icons';
 
 const FilesWrapper = styled.div`
 	display: flex;
@@ -14,8 +16,8 @@ const FilesWrapper = styled.div`
 function Explorer({ items, closeExplorer, openNotepad, isMobile }) {
     return (
         <Modal
-            icon="windows_explorer"
-            title="Explorer - Declan Gessel"
+        icon={<WindowsExplorer variant="32x32_4" />}
+        title="Explorer - Declan Gessel"
             closeModal={closeExplorer}
             style={{
                 left: isMobile ? '5%' : '15%',
